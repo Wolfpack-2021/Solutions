@@ -1,12 +1,13 @@
 #Trees Excercises
 
-#Tree Construction
+#Tree Node
 class TreeNode: 
     def __init__(self, left, right, value):
         self.left = left
         self.right = right
         self.value = value
 
+#Tree Construction
 class Tree:
     def __init__ (self, root):
         self.root = root
@@ -19,21 +20,21 @@ class Tree:
         )
         n = self.root 
 
-        def add_(node, n):
+        def _add(node, n):
  
             if node.value > n.value:
                 if n.right != None:
-                    add_(node, n.right)
+                    _add(node, n.right)
                 else: 
                     n.right = node 
                     
             elif node.value < n.value: 
                 if n.left != None:
-                    add_(node, n.left)
+                    _add(node, n.left)
                 else: 
                     n.left = node
 
-        add_(node, n)
+        _add(node, n)
 
     def validate (self):
 
@@ -55,9 +56,6 @@ class Tree:
         return validation_legwork(self.root)
 
 
-
-
-
 #Node Instance with Actual Value 
 node_1 = TreeNode(
     left = None,
@@ -73,5 +71,7 @@ tree_1.add_node(1)
 tree_1.add_node(3)
 tree_1.add_node(5)
 tree_1.add_node(7)
+
+## We should add a an asset and test case.
 
 print (tree_1.validate())
