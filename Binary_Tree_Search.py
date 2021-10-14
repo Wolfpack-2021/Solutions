@@ -43,7 +43,7 @@ class Tree:
             return False   
 
     
-# search method to compare the value with nodes       
+# search method to compare the value with nodes        
     def search(self, find_value) -> None:
         x = self.root
         
