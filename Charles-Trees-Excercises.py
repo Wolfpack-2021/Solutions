@@ -111,6 +111,7 @@ def assemble_tree(root_left, root_right, root_value, default = True, node_list =
 
 assert assemble_tree(None, None, 4).validate() == True
 assert assemble_tree(None, None, 4).search(6) == True
+assert assemble_tree(None, None, 4).search(10) == False
 
 
 
